@@ -4,7 +4,7 @@ Implemented a secure signup and login system using JWT.
 Developed the REST APIs that allow users to view, join, and participate in tournaments and leagues.
 Provide support for creating, managing, and fetching tournament and league details, including player participation, match results, and prize distributions.
 
-ENDPOINTS:-
+ENDPOINTS:=
 
 SignUp or Register: /auth/signUp
 Login: /auth/login
