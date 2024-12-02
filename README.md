@@ -1,4 +1,4 @@
-##GAMING APP REST APIs
+## GAMING APP REST APIs
 
 Implemented a secure signup and login system using JWT.
 Developed the REST APIs that allow users to view, join, and participate in tournaments and leagues.
@@ -6,7 +6,7 @@ Provide support for creating, managing, and fetching tournament and league detai
 
 #ENDPOINTS:=
 
-SignUp or Register: /auth/signUp<br/>
+- SignUp or Register: /auth/signUp<br/>
 Login: /auth/login<br/>
 <br/>
 Create Player: /player/create<br/>
