@@ -30,63 +30,19 @@ public class TeamService {
     @Autowired
     public LeagueRepo leagueRepo;
 
-
-
+    
     public List<Team> getAllTeams() {
-//        return teamRepo.findAll().stream()
-//                .map(team -> new TeamDto(
-//                        team.getId(),
-//                        team.getTeamId(),
-//                        team.getName(),
-//                        team.getLeague() != null ? team.getLeague().getId() : null,
-//                        team.getLeague() != null ? team.getLeague().getName() : null,
-//                        team.getTournament() != null ? team.getTournament().getId() : null,
-//                        team.getTournament() != null ? team.getTournament().getName() : null
-//                ))
-//                .collect(Collectors.toList());
         return teamRepo.findAll();
-    }
-//        System.out.println("here");
-//        List<Team> team = teamRepo.findAll();
-////        List<Team> teams = teamRepo.findAll();
-//        System.out.println(team);
-//        System.out.println("teams not printed");
-//        List<TeamDto> teamDtos = new ArrayList<>();
-//        for (int i=0;i< team.size();i++)
-//        {
-//            System.out.println("inside");
-//            TeamDto teamDto = teamDtoToTeam(team.get(i));
-////            teamDto.setId(team.get(i).getId());
-//
-//            System.out.println(teamDto);
-//            teamDtos.add(teamDto);
-//        } System.out.println("outside for");
-//        return teamDtos;
-//    }
+}
 
     public ResponseEntity<?> getTeamById(Long id) {
-
         if (!teamRepo.existsById(id)) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Team Not found");
         }
         Team team = teamRepo.findById(id).get();
-//        return ResponseEntity.ok(new TeamDto(team.getId(),
-//                team.getTeamId(),
-//                team.getName(),
-//                team.getLeague() != null ? team.getLeague().getId() : null,
-//                team.getLeague() != null ? team.getLeague().getName() : null,
-//                team.getTournament() != null ? team.getTournament().getId() : null,
-//                team.getTournament() != null ? team.getTournament().getName() : null));
+
         return ResponseEntity.ok(team);
     }
-//        TeamDto teamDto = teamDtoToTeam(team);
-////         Optional<Team> team = teamRepo.findById(teamId);
-////         if(team.isEmpty()){
-////             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Team Not found");
-////         }
-////         TeamDto teamDto = teamDtoToTeam(team.get());
-//        return ResponseEntity.status(HttpStatus.OK).body(teamDto);
-//    }
 
        public Team createTeam(TeamDto teamDto) {
            Team team = teamDto.getTeam();
