@@ -8,8 +8,8 @@ Provide support for creating, managing, and fetching tournament and league detai
 
 - SignUp or Register: /auth/signUp<br/>
 - Login: /auth/login<br/>
-<br/>
-- Create Player: /player/create<br/>
+
+-Create Player: /player/create<br/>
 - Get All Player: /player/getAll<br/>
 - Get Player by Id: /player/get/{Id}<br/>
 - Get Players by TeamId: /player/getByTeam/{teamId}<br/>
