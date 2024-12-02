@@ -1,0 +1,2541 @@
+{
+	"info": {
+		"_postman_id": "c95dcb83-2b98-4829-988f-8df470c27246",
+		"name": "GamingAppAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40117877"
+	},
+	"item": [
+		{
+			"name": "1. SignUp APIs",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"username\" : \"Abhishek\",\r\n   \"password\" : \"abhi123\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/auth/signup"
+					},
+					"response": [
+						{
+							"name": "SignUp or Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"username\" : \"Abhishek\",\r\n   \"password\" : \"abhi123\"       \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/auth/signup"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 20:18:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "User Registered Successfully"
+						}
+					]
+				},
+				{
+					"name": "Login ",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"username\" : \"Sanya Singh\",\r\n   \"password\" : \"sanya123\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"username\" : \"Sanya Singh\",\r\n   \"password\" : \"sanya123\"       \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 20:17:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSBTaW5naCIsImlhdCI6MTczMzA4NDIzMSwiZXhwIjoxNzMzMTIwMjMxfQ.1BoLuaTQ7VdTjcBU9gSPnJ4GopdshJEjTaYMdVep2xI"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "2. Team APIs",
+			"item": [
+				{
+					"name": "Create Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSBTaW5naCIsImlhdCI6MTczMzA3NTMyNiwiZXhwIjoxNzMzMTExMzI2fQ.uhZfoCNe0MG_HE6odM7ruAGAh_zrdvdCIFoCcMbo7P4"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\" : 106,\r\n    \"name\" : \"Haryanvvi Hunters\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/team/create"
+					},
+					"response": [
+						{
+							"name": "Create Team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teamId\" : 106,\r\n    \"name\" : \"Haryanvvi Hunters\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/team/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 20:11:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 15,\n    \"teamId\": 106,\n    \"name\": \"Haryanvvi Hunters\",\n    \"league\": null,\n    \"tournament\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Team by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSBTaW5naCIsImlhdCI6MTczMzA3NTMyNiwiZXhwIjoxNzMzMTExMzI2fQ.uhZfoCNe0MG_HE6odM7ruAGAh_zrdvdCIFoCcMbo7P4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/team/get/10"
+					},
+					"response": [
+						{
+							"name": "Get Team by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/team/get/10"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 19:42:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 10,\n    \"teamId\": 101,\n    \"name\": \"Punjab Kings\",\n    \"league\": null,\n    \"tournament\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSBTaW5naCIsImlhdCI6MTczMzA3NTMyNiwiZXhwIjoxNzMzMTExMzI2fQ.uhZfoCNe0MG_HE6odM7ruAGAh_zrdvdCIFoCcMbo7P4"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/team/delete/2"
+					},
+					"response": [
+						{
+							"name": "Delete Team",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/team/delete/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 19:33:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Team Deleted Successfully"
+						}
+					]
+				},
+				{
+					"name": "Get All Teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/team/getAll"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/team/getAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/team/getAll"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 19:43:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 9,\n        \"teamId\": 100,\n        \"name\": \"Mumbai Indians\",\n        \"league\": null,\n        \"tournament\": null\n    },\n    {\n        \"id\": 10,\n        \"teamId\": 101,\n        \"name\": \"Punjab Kings\",\n        \"league\": null,\n        \"tournament\": null\n    },\n    {\n        \"id\": 11,\n        \"teamId\": 102,\n        \"name\": \"Delhi Capitals\",\n        \"league\": null,\n        \"tournament\": null\n    },\n    {\n        \"id\": 12,\n        \"teamId\": 103,\n        \"name\": \"Gujarat Titans\",\n        \"league\": null,\n        \"tournament\": null\n    },\n    {\n        \"id\": 13,\n        \"teamId\": 104,\n        \"name\": \"Tamil Nadu Dragons\",\n        \"league\": null,\n        \"tournament\": null\n    },\n    {\n        \"id\": 14,\n        \"teamId\": 105,\n        \"name\": \"Bangalore Bashers\",\n        \"league\": null,\n        \"tournament\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {   \r\n        \"teamId\": 102,\r\n        \"name\": \"Delhi Capital\"   \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/team/update/11"
+					},
+					"response": [
+						{
+							"name": "Update Team",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {   \r\n        \"teamId\": 102,\r\n        \"name\": \"Delhi Capital\"   \r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/team/update/11"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 19:45:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 11,\n    \"teamId\": 102,\n    \"name\": \"Delhi Capital\",\n    \"league\": null,\n    \"tournament\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "3. Player APIs",
+			"item": [
+				{
+					"name": "Create Player",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {   \r\n        \"name\":\"Virat\",\r\n        \"country\":\"india\",\r\n        \"state\":\"UP\",\r\n        \"city\":\"lucknow\",\r\n        \"mobile\":76437865,\r\n        \"teamId\":105,\r\n        \"teamName\":\"Bangalore Bashers\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/player/create"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/player/create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {   \r\n        \"name\":\"Rohan\",\r\n        \"country\":\"india\",\r\n        \"state\":\"bihar\",\r\n        \"city\":\"patna\",\r\n        \"mobile\":76437865,\r\n        \"teamId\":103,\r\n        \"teamName\":\"Tamil Nadu Dragons\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/player/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 19:59:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Player Created Successfully"
+						}
+					]
+				},
+				{
+					"name": "Get All Players",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/player/getAll"
+					},
+					"response": [
+						{
+							"name": "Get All Players",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/player/getAll"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 20:14:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"name\": \"Rohan\",\n        \"country\": \"india\",\n        \"state\": \"bihar\",\n        \"city\": \"patna\",\n        \"mobile\": 76437865,\n        \"team\": {\n            \"id\": 12,\n            \"teamId\": 103,\n            \"name\": \"Gujarat Titans\",\n            \"league\": null,\n            \"tournament\": null\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Players by team id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/player/getByTeam/105"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Player by team id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/player/delete/5"
+					},
+					"response": [
+						{
+							"name": "Delete Player by team id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/player/delete/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Dec 2024 20:15:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Deletion Successful"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "4. Tournament APIs",
+			"item": [
+				{
+					"name": "Create Tournament",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"tourment1\",\r\n   \"status\":\"upcoming\",\r\n   \"startDate\": \"15-12-2024\",\r\n   \"endDate\": \"20-12-2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/create"
+					},
+					"response": [
+						{
+							"name": "Create Tournament",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\":\"tourment1\",\r\n   \"status\":\"upcoming\",\r\n   \"startDate\": \"15-12-2024\",\r\n   \"endDate\": \"20-12-2024\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/tournament/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:32:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"name\": \"tourment1\",\n    \"status\": \"upcoming\",\n    \"startDate\": \"2024-12-15\",\n    \"endDate\": \"2024-12-20\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Tournament By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/get/5"
+					},
+					"response": [
+						{
+							"name": "Get Tournament By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/tournament/get/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:33:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"name\": \"tourment1\",\n    \"status\": \"upcoming\",\n    \"startDate\": \"2024-12-15\",\n    \"endDate\": \"2024-12-20\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a Tournament",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/delete/2"
+					},
+					"response": [
+						{
+							"name": "Delete a Tournament",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/tournament/delete/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:34:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Tournament Deleted Successfully"
+						}
+					]
+				},
+				{
+					"name": "End a Tournament",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/endTournament/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Upcoming a Tournaments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/getUpcomingTournaments"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ongoing  Tournaments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/getOngoingTournaments"
+					},
+					"response": [
+						{
+							"name": "Get All Ongoing  Tournaments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/tournament/getOngoingTournaments"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:41:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"tour3\",\n        \"status\": \"ONGOING\",\n        \"startDate\": \"2024-12-16\",\n        \"endDate\": \"2024-12-21\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add Team to tournament",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\":101,\r\n    \"teamName\":\"Punjab Kings\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tournament/addTeam?tournamentId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tournament",
+								"addTeam"
+							],
+							"query": [
+								{
+									"key": "tournamentId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Team to tournament",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teamId\":101,\r\n    \"teamName\":\"Punjab Kings\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/tournament/addTeam?tournamentId=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"tournament",
+										"addTeam"
+									],
+									"query": [
+										{
+											"key": "tournamentId",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:43:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Team Added Successfully "
+						}
+					]
+				},
+				{
+					"name": "Get Teams of a tournament",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\":101,\r\n    \"teamName\":\"Punjab Kings\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/getTeams/5"
+					},
+					"response": [
+						{
+							"name": "Get Teams of a tournament",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teamId\":101,\r\n    \"teamName\":\"Punjab Kings\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/tournament/getTeams/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:45:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 10,\n        \"teamId\": 101,\n        \"name\": \"Punjab Kings\",\n        \"league\": null,\n        \"tournament\": {\n            \"id\": 5,\n            \"name\": \"tourment1\",\n            \"status\": \"upcoming\",\n            \"startDate\": \"2024-12-15\",\n            \"endDate\": \"2024-12-20\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Distribute Prize",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW55YSIsImlhdCI6MTczMzA4MTk4MSwiZXhwIjoxNzMzMTE3OTgxfQ.n5XYh04JS4v6vXLGvKBfwi4UR49WmO_2G6OFqT97WeY"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tournamentId\":5,\r\n    \"teamId\":101,\r\n    \"prizeName\":\"winner\",\r\n    \"amount\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tournament/distributePrize"
+					},
+					"response": [
+						{
+							"name": "Distribute Prize",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tournamentId\":5,\r\n    \"teamId\":101,\r\n    \"prizeName\":\"winner\",\r\n    \"amount\":1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/tournament/distributePrize"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:47:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Prize Distributed Successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "5. League APIs",
+			"item": [
+				{
+					"name": "Create a League",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTQ2MywiZXhwIjoxNzMzMTQ3NDYzfQ.evRP05vwvFI_qEraVbiAm3mrsjX_sUuaSYJKJcc03t4"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"indian premier league\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/league/create"
+					},
+					"response": [
+						{
+							"name": "Create a League Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\":\"indian premier league\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/league/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:52:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "League Created Successfully "
+						}
+					]
+				},
+				{
+					"name": "Get All League",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTQ2MywiZXhwIjoxNzMzMTQ3NDYzfQ.evRP05vwvFI_qEraVbiAm3mrsjX_sUuaSYJKJcc03t4"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/league/getAll"
+					},
+					"response": [
+						{
+							"name": "Get All League Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/league/getAll"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:54:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"mumbai hockey league\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"indian premier league\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get league by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTQ2MywiZXhwIjoxNzMzMTQ3NDYzfQ.evRP05vwvFI_qEraVbiAm3mrsjX_sUuaSYJKJcc03t4"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/league/get/1"
+					},
+					"response": [
+						{
+							"name": "Get league by id response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/league/get/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:55:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"mumbai hockey league\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Team to a league",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTk1OCwiZXhwIjoxNzMzMTQ3OTU4fQ.Zf1ViLbhphVIG8J6klLcHK8AgrscdlpZkuWbMJNuYjs"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\":100,\r\n    \"name\":\"Mumbai Indians\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/league/addTeam?leagueId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"league",
+								"addTeam"
+							],
+							"query": [
+								{
+									"key": "leagueId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Team to a league Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teamId\":100,\r\n    \"name\":\"Mumbai Indians\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/league/addTeam?leagueId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"league",
+										"addTeam"
+									],
+									"query": [
+										{
+											"key": "leagueId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 03:59:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Team Added Successfully"
+						}
+					]
+				},
+				{
+					"name": "Delete Team from a League",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTk1OCwiZXhwIjoxNzMzMTQ3OTU4fQ.Zf1ViLbhphVIG8J6klLcHK8AgrscdlpZkuWbMJNuYjs"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\":100,\r\n    \"name\":\"Mumbai Indians\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/league/deleteTeam?leagueId=1&teamId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"league",
+								"deleteTeam"
+							],
+							"query": [
+								{
+									"key": "leagueId",
+									"value": "1"
+								},
+								{
+									"key": "teamId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Team from a League  response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"teamId\":100,\r\n    \"name\":\"Mumbai Indians\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/league/deleteTeam?leagueId=1&teamId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"league",
+										"deleteTeam"
+									],
+									"query": [
+										{
+											"key": "leagueId",
+											"value": "1"
+										},
+										{
+											"key": "teamId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Dec 2024 04:01:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Team Not Present in the League"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "6. Match APIs",
+			"item": [
+				{
+					"name": "Create a Match",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTk1OCwiZXhwIjoxNzMzMTQ3OTU4fQ.Zf1ViLbhphVIG8J6klLcHK8AgrscdlpZkuWbMJNuYjs"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"tournament\",\r\n    \"typeId\":5,\r\n    \"team1Id\":103,\r\n    \"team2Id\":104,\r\n    \"date\":\"2024-12-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/match/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All matches",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTk1OCwiZXhwIjoxNzMzMTQ3OTU4fQ.Zf1ViLbhphVIG8J6klLcHK8AgrscdlpZkuWbMJNuYjs"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/match/getAll"
+					},
+					"response": []
+				},
+				{
+					"name": "set result of a match",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYmhpc2hlayIsImlhdCI6MTczMzExMTk1OCwiZXhwIjoxNzMzMTQ3OTU4fQ.Zf1ViLbhphVIG8J6klLcHK8AgrscdlpZkuWbMJNuYjs"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer-eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTczMjgwNzkwNCwiZXhwIjoxNzMyODQzOTA0fQ.eHdT3_60G5LcbiC7xZCoyOYZX0oaGt49t_W2mGesxR4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/match/setResult?matchId=1&result=\"draw\"",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"match",
+								"setResult"
+							],
+							"query": [
+								{
+									"key": "matchId",
+									"value": "1"
+								},
+								{
+									"key": "result",
+									"value": "\"draw\""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
